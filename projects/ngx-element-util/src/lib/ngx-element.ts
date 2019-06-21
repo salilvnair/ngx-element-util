@@ -29,10 +29,16 @@ export class NgxElement {
     return this;
   }
 
-  attr<T>(attributeName:string, newValue?:any):T {
+  attr<T>(attributeName:string, newValue?:any, exposeJson?:boolean):T {
     if(newValue){
       this.customElement[attributeName] = newValue;
-      this.customElement.setAttribute(attributeName+"-ngx-element-data",JSON.stringify(newValue));
+      if(exposeJson) {
+        this.customElement.setAttribute(attributeName+"-ngx-element-data",JSON.stringify(newValue));
+      }   
+      else {
+        let value = {'info':'exposeJson is set as false, set it to true to get data'};
+        this.customElement.setAttribute(attributeName+"-ngx-element-data",JSON.stringify(value));
+      }   
     }
     return JSON.parse(this.customElement.getAttribute(attributeName+"-ngx-element-data"));
   }
