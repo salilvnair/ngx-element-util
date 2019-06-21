@@ -1,6 +1,21 @@
 {
-  "name": "ngx-element-util",
+  "name": "@salilvnair/ngx-element-util",
   "version": "0.0.1",
+  "author": {
+    "name": "Salil V Nair"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salilvnair/ngx-element-util.git"
+  },
+  "homepage": "https://github.com/salilvnair/ngx-element-util",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "mfe",
+    "@angular/elements",
+    "custom-element"
+  ],
   "peerDependencies": {
     "@angular/common": "^8.0.1",
     "@angular/core": "^8.0.1"

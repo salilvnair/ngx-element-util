@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { NgxElementUtilModule } from 'projects/ngx-element-util/src/public-api';
 
+const CUSTOM_ELEMENT_ENTRY_COMPONENT  = [
+  TestComponent
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,6 +18,7 @@ import { NgxElementUtilModule } from 'projects/ngx-element-util/src/public-api';
     NgxElementUtilModule
   ],
   providers: [],
+  entryComponents: [CUSTOM_ELEMENT_ENTRY_COMPONENT],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
