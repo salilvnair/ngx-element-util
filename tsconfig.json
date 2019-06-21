@@ -18,6 +18,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-element-util": [
+        "dist/ngx-element-util"
+      ],
+      "ngx-element-util/*": [
+        "dist/ngx-element-util/*"
+      ]
+    }
   }
 }
