@@ -22,9 +22,9 @@ export class NgxElement {
     return this.selector(component).customElement
   }
 
-  on(eventName:string,callback:Function) {
-    this.customElement.addEventListener(eventName,(event)=>{
-      callback(event);
+  on<T>(eventName:string,callback:Function) {
+    this.customElement.addEventListener(eventName,(event:any)=>{
+      callback(<T>event.detail,event);
     });
     return this;
   }
